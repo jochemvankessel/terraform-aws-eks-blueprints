@@ -41,6 +41,7 @@ locals {
     cilium                    = var.enable_cilium ? module.cilium[0].argocd_gitops_config : null
     gatekeeper                = var.enable_gatekeeper ? module.gatekeeper[0].argocd_gitops_config : null
     kubePrometheusStack       = var.enable_kube_prometheus_stack ? module.kube_prometheus_stack[0].argocd_gitops_config : null
+    externalSecrets           = var.enable_external_secrets ? module.external_secrets[0].argocd_gitops_config : null
   }
 
   addon_context = {
